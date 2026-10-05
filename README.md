@@ -47,12 +47,12 @@ flowchart TD
     ADMIN --> NGINX
     NGINX --> INGRESS
 
-    INGRESS -->|/api/auth/*| SEC
-    INGRESS -->|/api/user/*, /api/scan/*| DATA
-    INGRESS -->|/api/stream/*, /api/mobile/*| LIVE
-    INGRESS -->|/api/modules/*, /api/ai/*| STUDIO
-    INGRESS -->|/api/guide/*| GUIDE
-    INGRESS -->|/api/admin/*| ADMIN_SRV
+    INGRESS -->|"/api/auth/*"| SEC
+    INGRESS -->|"/api/user/*, /api/scan/*"| DATA
+    INGRESS -->|"/api/stream/*, /api/mobile/*"| LIVE
+    INGRESS -->|"/api/modules/*, /api/ai/*"| STUDIO
+    INGRESS -->|"/api/guide/*"| GUIDE
+    INGRESS -->|"/api/admin/*"| ADMIN_SRV
 
     STUDIO <--> AI_GW
     DATA --> DB
